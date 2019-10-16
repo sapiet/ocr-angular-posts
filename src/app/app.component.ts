@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Post} from './models/post.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ocr-angular-course';
+  public posts: Array<Post> = [
+    new Post(
+      'Mon premier post',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, voluptatibus.'
+    ),
+    new Post(
+      'Mon deuxième post',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, voluptatibus.'
+    ),
+    new Post(
+      'Encore un post',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, voluptatibus.'
+    )
+  ];
 }
